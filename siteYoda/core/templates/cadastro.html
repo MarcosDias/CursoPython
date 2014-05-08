@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    <title>Jedis | Cadastro</title>
+{% endblock titulo %}
+
+{% block content %}
+<div class="row padding-top padding-bottom">
+	<h1 id="">Novo Padawan</h1>
+	<form id="form" class="margin-top" method="post" action="." 
+            style="width:800px" name="form">
+		<fieldset>
+			<label>
+				Nome:
+				<small class="icon exclamation-sign"></small>
+			</label>
+			<input id="idName" type="text" name="name">
+		</fieldset>
+		<fieldset>
+			<label>
+				Espécie:
+			</label>
+			<input id="idEspecie" type="text" name="especie">
+		</fieldset>
+		<fieldset>
+			<label>
+				Email:
+				<small class="icon exclamation-sign"></small>
+			</label>
+			<input id="idEmail" type="text" name="email">
+		</fieldset>
+		<fieldset >
+			<label>
+				Midi-chlorians (Poder):
+			</label>
+			<input style="width: 300px;" id="idPoder" type="text" name="Poder">
+		</fieldset>
+		<fieldset >
+			<label>
+				Idade:
+			</label>
+			<input style="width: 300px;" id="idIdade" type="text" name="idade">
+		</fieldset>
+		<fieldset>
+			<label>
+				Radio
+				<small class="icon exclamation-sign"></small>
+			</label>
+			<input type="radio" name="radio1">
+			<span>Yes</span>
+			<input type="radio" disabled="" name="radio2">
+			<span>No</span>
+		</fieldset>
+		<br />
+		<fieldset>
+			<label></label>
+			<input type="submit" value="Salvar" class="button sucess large">		 
+		</fieldset>
+	</form>
+</div>
+{% endblock content %}

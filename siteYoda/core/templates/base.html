@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	{% load staticfiles %}
+    <meta charset="utf-8" />
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="{% static "tuktuk/tuktuk.css" %}">
+    <link rel="stylesheet" href="{% static "tuktuk/tuktuk.theme.css" %}">
+    <!-- TUKTUK.WIDGETS -->
+    <link rel="stylesheet" href="{% static "tuktuk/tuktuk.icons.css" %}">
+    
+    <link rel="stylesheet" href="{% static "css/style.css" %}" type="text/css">
+    
+    {% block titulo %}
+        <title>Jedis</title>
+    {% endblock titulo %}
+
+</head>
+<body class="text thin">
+
+    <header class="bck dark padding color white">
+        <div class="row">
+            <div class="column_6">
+                <h2 class="text italic thin">Jedi</h2>
+            </div>
+            <nav class="column_6  text right bold">
+            	<a href="/">Início</a>
+            	<a href="cadastrar/">Cadastrar Padawan</a>
+				<a href="http://www.djangoproject.com/">
+           			<img src="https://www.djangoproject.com/m/img/badges/djangopowered126x54_grey.gif" 
+           				border="0" alt="Powered by Django." title="Powered by Django." />
+   				</a>
+            </nav>
+        </div>
+    </header>
+    
+    {% block content %}
+  	{% endblock content %}
+
+    <footer class="bck dark padding">
+		<div class="row margin-top margin-bottom">
+			<div align="center">
+				<img id="imgFooter" src="{% static "img/yoda.png" %}" alt="Yoda" /><br />
+				<a href="/">Início</a> <br />
+				<a href="cadastrar/">Cadastrar Padawan</a>
+			</div>
+		</div>
+	</footer>
+</body>

@@ -1,0 +1,105 @@
+    <!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="tuktuk/tuktuk.css">
+    <link rel="stylesheet" href="tuktuk/tuktuk.theme.css">
+    <!-- TUKTUK.WIDGETS -->
+    <link rel="stylesheet" href="tuktuk/tuktuk.icons.css">
+    
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <title>Jedis | Cadastro</title>
+
+</head>
+<body class="text thin">
+
+    <header class="bck dark padding color white">
+        <div class="row">
+            <div class="column_6">
+                <h2 class="text italic thin">Jedi</h2>
+            </div>
+            <nav class="column_6  text right bold">
+            	<a href="inicio.html">Início</a>
+            	<a href="cadastro.html">Cadastrar Padawan</a>
+				<a href="http://www.djangoproject.com/">
+           			<img src="https://www.djangoproject.com/m/img/badges/djangopowered126x54_grey.gif" 
+           				border="0" alt="Powered by Django." title="Powered by Django." />
+   				</a>
+            </nav>
+        </div>
+    </header>
+    <section class="bck light padding">
+    	<div class="row padding-top padding-bottom">
+    		<h1 id="">Novo Padawan</h1>
+    		<form id="form" class="margin-top" method="post" action="." style="width:800px" name="form">
+    			<fieldset>
+    				<label>
+    					Nome:
+    					<small class="icon exclamation-sign"></small>
+					</label>
+					<input id="idName" type="text" name="name">
+				</fieldset>
+				<fieldset>
+                    <label>
+                        Raça
+                        <small class="icon exclamation-sign"></small>
+                    </label>
+                    <span class="select">
+                        <select>
+                            <option selected value="0"></option>
+                            <option value="1">Humano</option>
+                            <option value="2">Rwook</option>
+                            <option value="3">Povo da Areia</option>
+                        </select>
+                    </span>
+				</fieldset>
+				<fieldset>
+    				<label>
+    					Email:
+    					<small class="icon exclamation-sign"></small>
+					</label>
+					<input id="idEmail" type="text" name="email">
+				</fieldset>
+				<fieldset >
+    				<label>
+    					Midi-chlorians (Poder):
+					</label>
+					<input id="id_poder" type="text" name="Poder">
+				</fieldset>
+				<fieldset >
+    				<label>
+    					Idade:
+					</label>
+					<input id="id_idade" type="text" name="idade">
+				</fieldset>
+				<fieldset>
+					<label>
+						Sexo
+						<small class="icon exclamation-sign"></small>
+					</label>
+					<input type="radio" name="sex">
+					<span>M</span>
+					<input type="radio" name="sex">
+					<span>F</span>
+				</fieldset>
+				<br />
+				<fieldset>
+					<label></label>
+					<input type="submit" value="Salvar" class="button sucess large">		 
+				</fieldset>
+    		</form>
+    	</div>
+    </section>
+    <footer class="bck dark padding">
+		<div class="row margin-top margin-bottom">
+			<div align="center">
+				<img id="imgFooter" src="img/yoda.png" alt="Yoda" /><br />
+				<a href="inicio.html">Início</a> <br />
+				<a href="cadastro.html">Cadastrar Padawan</a>
+			</div>
+		</div>
+	</footer>
+</body>

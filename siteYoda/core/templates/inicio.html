@@ -17,81 +17,18 @@
 			<th id="colIdade">Idade</th>
 			<th id="colEmail">Email</th>
 			<th id="colPoder">Midi-chlorians (Poder)</th>
-			<th id="Mestre">Mestre</th>
 		</tr>
 		<!-- BODY -->
+		{% for tupla in list %}
 		<tr>
-			<td>Obi-Wan Kenobi</td>
-			<td>Humano</td>					
-			<td>M</td>
-			<td>15</td>
-			<td>owkenobi@ordemjedi.gal</td>
-			<td>750000</td>
-			<td>Qui-Gon Jinn</td>
+			<td>{{ tupla.nome }}</td>
+			<td>{{ tupla.raca }}</td>					
+			<td>{{ tupla.sexo }}</td>
+			<td>{% if tupla.idade %}{{ tupla.idade }} {% else %} {% endif %}</td>
+			<td>{{ tupla.email }}</td>
+			<td>{% if tupla.poder %}{{ tupla.poder }} {% else %} {% endif %}</td>
 		</tr>
-		<tr>
-			<td>Obi-Wan Kenobi</td>
-			<td>Humano</td>					
-			<td>M</td>
-			<td>15</td>
-			<td>owkenobi@ordemjedi.gal</td>
-			<td>750000</td>
-			<td>Qui-Gon Jinn</td>
-		</tr>
-		<tr>
-			<td>Obi-Wan Kenobi</td>
-			<td>Humano</td>					
-			<td>M</td>
-			<td>15</td>
-			<td>owkenobi@ordemjedi.gal</td>
-			<td>750000</td>
-			<td>Qui-Gon Jinn</td>
-		</tr>
-		<tr>
-			<td>Obi-Wan Kenobi</td>
-			<td>Humano</td>					
-			<td>M</td>
-			<td>15</td>
-			<td>owkenobi@ordemjedi.gal</td>
-			<td>750000</td>
-			<td>Qui-Gon Jinn</td>
-		</tr>
-		<tr>
-			<td>Obi-Wan Kenobi</td>
-			<td>Humano</td>					
-			<td>M</td>
-			<td>15</td>
-			<td>owkenobi@ordemjedi.gal</td>
-			<td>750000</td>
-			<td>Qui-Gon Jinn</td>
-		</tr>
-		<tr>
-			<td>Obi-Wan Kenobi</td>
-			<td>Humano</td>					
-			<td>M</td>
-			<td>15</td>
-			<td>owkenobi@ordemjedi.gal</td>
-			<td>750000</td>
-			<td>Qui-Gon Jinn</td>
-		</tr>
-		<tr>
-			<td>Obi-Wan Kenobi</td>
-			<td>Humano</td>					
-			<td>M</td>
-			<td>15</td>
-			<td>owkenobi@ordemjedi.gal</td>
-			<td>750000</td>
-			<td>Qui-Gon Jinn</td>
-		</tr>
-		<tr>
-			<td>Obi-Wan Kenobi</td>
-			<td>Humano</td>					
-			<td>M</td>
-			<td>15</td>
-			<td>owkenobi@ordemjedi.gal</td>
-			<td>750000</td>
-			<td>Qui-Gon Jinn</td>
-		</tr>
+		{% endfor %}
 	</table>
 </div>
 {% endblock content %}

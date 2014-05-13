@@ -9,47 +9,49 @@
 	<h1 id="">Novo Padawan</h1>
 	<form id="form" class="margin-top" method="post" action="." 
             style="width:800px" name="form">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
 		<fieldset>
-			<label>
-				Nome:
-				<small class="icon exclamation-sign"></small>
+			<label for="{{ form.nome.id_for_label }}">
+				{{ form.nome.label }}:
+				<small class="icon exclamation-sign">{{ form.nome.errors }}</small>
 			</label>
-			<input id="idName" type="text" name="name">
+			{{ form.nome }}
 		</fieldset>
 		<fieldset>
-			<label>
-				Espécie:
-			</label>
-			<input id="idEspecie" type="text" name="especie">
+			<label for="{{ form.raca.id_for_label }}">
+                {{ form.raca.label }}
+                <small class="icon exclamation-sign">{{ form.raca.errors }}</small>
+            </label>
+            <span class="select">
+                {{ form.raca }}:
+            </span>
 		</fieldset>
 		<fieldset>
-			<label>
-				Email:
-				<small class="icon exclamation-sign"></small>
+			<label for="{{ form.email.id_for_label }}">
+				{{ form.email.label }}:
+				<small class="icon exclamation-sign">{{ form.email.errors }}</small>
 			</label>
-			<input id="idEmail" type="text" name="email">
+			{{ form.email }}
 		</fieldset>
 		<fieldset >
-			<label>
-				Midi-chlorians (Poder):
+			<label for="{{ form.poder.id_for_label }}">
+				{{ form.poder.label }}:
 			</label>
-			<input style="width: 300px;" id="idPoder" type="text" name="Poder">
+			{{ form.poder }}
 		</fieldset>
 		<fieldset >
-			<label>
-				Idade:
+			<label for="{{ form.idade.id_for_label }}">
+				{{ form.idade.label }}:
 			</label>
-			<input style="width: 300px;" id="idIdade" type="text" name="idade">
+			{{ form.idade }}
 		</fieldset>
 		<fieldset>
-			<label>
-				Radio
-				<small class="icon exclamation-sign"></small>
-			</label>
-			<input type="radio" name="radio1">
-			<span>Yes</span>
-			<input type="radio" disabled="" name="radio2">
-			<span>No</span>
+			<label for="{{ form.sexo.id_for_label }}">
+                {{ form.sexo.label }}
+                <small class="icon exclamation-sign">{{ form.sexo.errors }}</small>
+            </label>
+            {{ form.sexo }}
 		</fieldset>
 		<br />
 		<fieldset>
